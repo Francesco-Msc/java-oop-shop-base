@@ -9,7 +9,7 @@ public class Prodotto {
     int price;
     int vat;
 
-    public Prodotto(int code, String name, String description, int price, int vat){
+    public Prodotto(String name, String description, int price, int vat){
         Random numeroRandom = new Random();
         this.code = numeroRandom.nextInt(10000);
         this.name = name;
