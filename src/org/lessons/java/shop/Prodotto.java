@@ -3,22 +3,28 @@ package org.lessons.java.shop;
 import java.util.Random;
 
 public class Prodotto {
-    int codice;
-    String nome;
-    String descrizione;
-    int prezzo;
-    int iva;
+    int code;
+    String name;
+    String description;
+    int price;
+    int vat;
 
-    public Prodotto(int codice, String nome, String descrizione, int prezzo, int iva){
+    public Prodotto(int code, String name, String description, int price, int vat){
         Random numeroRandom = new Random();
-        this.codice = numeroRandom.nextInt(10000);
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.prezzo = prezzo;
-        this.iva = iva;
+        this.code = numeroRandom.nextInt(10000);
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.vat = vat;
     }
 
-    public int prezzoIntero(){
-        return this.prezzo;
+    public int noVatPrice(){
+        return this.price;
+    }
+    public double vatPrice(){
+        return this.price + (this.price * vat / 100.0);
+    }
+    public String fullName(){
+        return this.code +"-"+ this.name;
     }
 }
