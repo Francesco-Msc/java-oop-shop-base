@@ -17,5 +17,13 @@ public class Main {
         System.out.println("La descrizione del prodotto è: " + Snowboard.description);
         System.out.println("Il prezzo del prodotto è: " + Snowboard.price);
         System.out.println("La percentuale di IVA che verrà applicata è di: " + Snowboard.vat +"%");
+
+        System.out.println("-----------");
+
+        Prodotto Bindings = new Prodotto("Union", "Bindings", 230, 22);
+
+        System.out.println(Bindings.fullName());
+        System.out.println(Bindings.noVatPrice());
+        System.out.println(Bindings.vatPrice());
     }
 }
